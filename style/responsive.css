@@ -1,0 +1,17 @@
+@media screen and (max-width: 700px){ /*Vamos aplicar essas regras na tela e quando a tela tiver no máximo 700px*/
+    header .container{
+        display: flex;
+        flex-direction: column; /*Jogará os itens para baixo quando tiver menos que 700px*/
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .descricao{
+        width: 50%;
+    }
+}

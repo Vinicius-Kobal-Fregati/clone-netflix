@@ -1,0 +1,115 @@
+:root{ /*Vamos guardar variáveis aqui dentro, as cores. Como vamos utilizar as mesmas em vários locais, é interessante criar uma variável para isso.*/
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+* { /* '*' Se refere a todo documento da página, aqui vamos resetar estilos pré prontos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Aqui faz com que os elementos em tela tenham exatamente o tamanho que foi definido*/
+
+} /*Por padrão, o reset vem primeiro*/
+
+/*Elementos base*/
+body{
+    background: var(--preto); /*Dessa forma que se utiliza variáveis no css*/
+    font-family: 'Arial', Times, serif; /*Poderia usar alguma fonte externa do Google Fonts ou outro site.*/
+    color: white;
+}
+
+header .container{
+    display: flex;
+    /*flex-direction: row;. Isso é uma das coisas que o display flex faz, orienta os componentes em linha*/
+    align-items: center; /*Alinha verticalmente os elementos*/
+    justify-content: space-between; /*Justifica os itens na horizontal*/
+}
+
+ header .logo{
+     color: var(--vermelho);
+     font-family: 'Arial Black', Times;
+     font-size: 40px;
+     margin-left: 5px;
+ }
+
+ header nav a{
+     text-decoration: none;
+     color: #AAA;
+     margin-right: 10px;
+    
+ }
+
+ header nav a:hover { /*Algo acontece toda vez que o mouse estiver em cima desse elemento*/
+    color: #fff;
+ }
+
+ /*Filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgb(0, 0, 0, .50)100%), url('/img/capa-house.jpg');
+/*O linear-gradient gera um degrade, o url nos permitiu inserir a imagem*/
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column; /*O flex coloca os itens em linha, aqui mudamos para coluna, para deixaros elementos um embaixo do outro*/
+    /*Agora vamos usar o justify-content, anteriormente foi para organizar os itens na horizonotal, como agora a direção está para coluna, vamos organizar eles na vertical*/
+    justify-content: center; /*O center centralizará eles*/
+    align-items: flex-start; /*Faz com que os itens se iniciem na esquerda (na orientação da horizontal, isso porque a orientação está em coluna)*/
+} /*Note que sem o live server, não é possível visualizar a imagem...*/
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+/*Precisamos sempre tentar trabalhar com posicionamento fluído, utilizando %*/
+
+.filme-principal .titulo{ /*Poderíamos deixar apenas o .titulo, mas dessa forma fica melhor a leitura e interpretação do código*/
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/*Usaremos o site fontawesome.com que nos permite usar itens (svg) que não temos.*/
+
+.botao{
+    background-color: rgba(0, 0, 0, .50); /*Aqui temos a cor preto com intensidade de 50%, o que dá um efeito de transparência*/
+    border: none;
+    color: white;
+
+    padding: 15px 30px; /*Altera o espaço interno do elemento*/
+    /*Lembrando que quando se passa um valor, altera todos os lados, dois, o primeiro é para cima e para baixo, o segundo para direita e esquerda. Ele funciona como se fosse um relógio ao 12:00, no sentido horário, se tiver 4 então, será: cima, direita, baixo, esquerda.*/
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer; /*Ao passar o mouse por cima, muda o cursor, indicando que é uma parte clicável*/
+    transition: .4s ease all; /*Isso fará a transição do cursor e das cores (linha 89 e 90) terem um delay de 0,4 segundos*/
+}
+
+.botao:hover{ /*Ao passar o mouse, a caixa e o texto mudam de cor*/
+    background-color: white;
+    color: black;
+}
+
+.botao i{ /*Aqui vamos alterar a classe botão da tag i*/
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{ /*Só vai alterar a classe filme-principal que contenha a classe container*/
+    width: 70%;
+}
+
+/*Vamos criar o carrossel utilizando um plugin Jquery, nomeado de OwlCarousel2*/
+
+.box-filme{ /*Vamos especificar uma altura e largura para as imagens do carrossel*/
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
