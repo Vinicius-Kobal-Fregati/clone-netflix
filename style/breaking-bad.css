@@ -1,0 +1,13 @@
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgb(0, 0, 0, .50)100%), url('/img/capa-breaking-bad.jpg');
+/*O linear-gradient gera um degrade, o url nos permitiu inserir a imagem*/
+    height: 400px;
+    background-size:100% 100%;
+
+    display: flex;
+    flex-direction: column; /*O flex coloca os itens em linha, aqui mudamos para coluna, para deixaros elementos um embaixo do outro*/
+    /*Agora vamos usar o justify-content, anteriormente foi para organizar os itens na horizonotal, como agora a direção está para coluna, vamos organizar eles na vertical*/
+    justify-content: center; /*O center centralizará eles*/
+    align-items: flex-start; /*Faz com que os itens se iniciem na esquerda (na orientação da horizontal, isso porque a orientação está em coluna)*/
+}

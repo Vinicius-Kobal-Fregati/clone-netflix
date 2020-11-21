@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!--html:5 cria a estrutura básica do nosso arquivo-->
+<!--As imagens e sinopses foram tiradas do site themoviedb.org-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Pega de forma automática o tamanho do device-->   
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/login.css">
+    <!--Responsividade-->
+    <link rel="stylesheet" href="style/responsive.css">
+    <!--owl css-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css"> <!--CTRL + espaço ajuda a encontrar o arquivo-->
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <title>NETFLIX CLONE</title>
+</head>
+<!--Tags semânticas como header e footer são interpretadas como div, elas possuem nomes diferentes para facilitar que outra pessoa entenda o código-->
+<body>
+    <header> <!--header + enter gera a estrutura. Header seria o cabeçalho-->
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+        </div>
+    </header>
+
+    <main> <!--Aqui ficará a maior parte do nosso site.-->
+        <!--As características do elemento pai são herdadas pelos filhos diretos, então o flex não funcionará nos botões.-->
+    <div class="principal">
+        <h2>Entrar</h2>
+        <label>
+            <input aria-label="Email ou número do telefone" type="text" class="campo" value="Email ou número do telefone">
+        </label>
+        <label>
+            <input aria-label="Senha" type="text" class="campo" value="Senha">
+        </label>
+        <a href="index.html"><button class="botao-login">Entrar</button></a>
+        <br class="distancia">
+        <div class="final">
+            <span class="lembrar"><i class="fas fa-check-square"></i>Lembre-se de mim</span>
+            <span class="ajuda">Precisa de ajuda?</span>
+        </div>
+        <p class= "facebook"><i class="fab fa-facebook-square"></i>Conectar com o Facebook</p>
+        <p class="assine">Novo por aqui? <span>Assine agora.</span></p>
+        <p class="saiba-mais">Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <span>Saiba mais.</span> </p>
+    </div>
+
+    </main>
+    <!--Por padrão sempre deixamos o javascript por último, para evitar erros-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script> <!--Link externo para poder usar os itens do site fontawesome.com-->
+</body>
+</html> 

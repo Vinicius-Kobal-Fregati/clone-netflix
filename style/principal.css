@@ -1,0 +1,28 @@
+.filme-principal{
+    background: linear-gradient(rgba(0, 0, 0, .50), rgb(0, 0, 0, .50)100%), url('https://assets.nflxext.com/ffe/siteui/vlv3/84b453b4-0d46-4f2c-bd44-81aa6c19c6b5/c548520c-3aaf-409c-bdce-11393df71cf1/BR-pt-20201116-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+}
+
+.filme-principal .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.video{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:20%;
+    left:60%;
+    margin-top:-50px;
+    margin-left:-50px;
+}  
+
+@media screen and (max-width: 1200px){
+    .video{
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+        background: 0;
+    }
+}

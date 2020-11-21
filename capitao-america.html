@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Pega de forma automática o tamanho do device-->   
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/principal.css">
+    <link rel="stylesheet" href="style/capitao-america.css">
     <!--Responsividade-->
     <link rel="stylesheet" href="style/responsive.css">
     <!--owl css-->
@@ -32,28 +32,25 @@
         <!--As características do elemento pai são herdadas pelos filhos diretos, então o flex não funcionará nos botões.-->
         <div class="filme-principal"> <!--atalho: div.filme-principal + enter-->
             <div class="container"> <!--Note que já há uma classe nomeada de container, assim vamos conseguir reutilizar código, o nome disso é wrapper.-->
-                <div>
-                    <h3 class="titulo">Netflix</h3>
-                    <p class="descricao">Possuímos mais de 3.000 filmes, mais de 70 produtores brasileiros, 950 séries (somando mais de 29 mil episódios)</p>
-                    <div class="botoes">
-                        <a href="https://www.youtube.com/watch?v=kpWMwSSl2PM" target="_blank">
-                            <button role="button" class="botao"> <!--O role nos passa a função desse objeto, no caso, ser um botão. Usamos isso para evitar erro em alguns devices.-->
-                                <i class="fas fa-play"></i> <!--Cria o ícone de play-->
-                                ASSISTIR AGORA
-                            </button>
-                        </a>
-                        <button role="button" class="botao">
-                            <i class="fas fa-info-circle"></i>
-                            MAIS INFORMAÇÕES
+                <h3 class="titulo">GUERRA CÍVIL</h3>
+                <p class="descricao">Após o ataque de Ultron, os políticos buscam algum meio de controlar os super-heróis, já que seus atos afetam toda a humanidade, gerando um conflito entre os heróis.</p>
+                <div class="botoes">
+                    <a href="https://www.youtube.com/watch?v=FRLYZn5PGuA" target="_blank">
+                        <button role="button" class="botao"> <!--O role nos passa a função desse objeto, no caso, ser um botão. Usamos isso para evitar erro em alguns devices.-->
+                            <i class="fas fa-play"></i> <!--Cria o ícone de play-->
+                            ASSISTIR AGORA
                         </button>
-                    </div>
-                </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2t-AIbErqts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </a>
+
+                    <button role="button" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
                 </div>
             </div> <!--Note que para nome de classe, id, variável, função, etc... não se usa acento.-->
         </div> <!--Toda vez que criamos uma div ela vem por padrão com display block-->
     </main>
+
     <div class="carrossel-filmes">
         <div class="owl-carousel owl-theme">
             <!--Dava para fazer essa parte de baixo pelo Backend (ou pelo front com JS), ou com Json, mas como ainda não sabemos, faremos dessa forma. Contudo, saiba que existem melhores.-->

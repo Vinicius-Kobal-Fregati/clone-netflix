@@ -1,0 +1,171 @@
+:root{ /*Vamos guardar variáveis aqui dentro, as cores. Como vamos utilizar as mesmas em vários locais, é interessante criar uma variável para isso.*/
+    --vermelho: #E50914;
+    --preto: #141414;
+    --margin: 40px;
+    --texto: rgb(160, 156, 156);
+}
+
+* { /* '*' Se refere a todo documento da página, aqui vamos resetar estilos pré prontos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Aqui faz com que os elementos em tela tenham exatamente o tamanho que foi definido*/
+
+} /*Por padrão, o reset vem primeiro*/
+
+/*Elementos base*/
+body{
+    background: linear-gradient(rgba(0, 0, 0, .50), rgb(0, 0, 0, .50)100%), url('https://assets.nflxext.com/ffe/siteui/vlv3/84b453b4-0d46-4f2c-bd44-81aa6c19c6b5/c548520c-3aaf-409c-bdce-11393df71cf1/BR-pt-20201116-popsignuptwoweeks-perspective_alpha_website_small.jpg'); /*Dessa forma que se utiliza variáveis no css*/
+    background-size: auto;
+    font-family: 'Arial', Times, serif; /*Poderia usar alguma fonte externa do Google Fonts ou outro site.*/
+    color: white;
+}
+
+header .container{
+    display: flex;
+    /*flex-direction: row;. Isso é uma das coisas que o display flex faz, orienta os componentes em linha*/
+    align-items: center; /*Alinha verticalmente os elementos*/
+    justify-content: space-between; /*Justifica os itens na horizontal*/
+}
+
+ header .logo{
+     color: var(--vermelho);
+     font-family: 'Arial Black', Times;
+     font-size: 40px;
+     margin-left: 5px;
+ }
+
+ header nav a{
+     text-decoration: none;
+     color: #AAA;
+     margin-right: 10px;
+    
+ }
+
+ header nav a:hover { /*Algo acontece toda vez que o mouse estiver em cima desse elemento*/
+    color: #fff;
+ }
+
+ main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+ }
+
+ .principal{
+    width: 450px;
+    height: 660px;
+    border: 2px solid rgb(0, 0, 0, .65);
+    background-color: rgb(0, 0, 0, .65);
+    padding: 60px;
+ }
+
+ .campo {
+    background-color: #333;
+    color: var(--texto);
+    padding: 0 20px 0;
+    width: 95%;
+    margin-left: 0;
+    border-radius: 4px;
+    border: 1px solid #333;
+    margin-top: var(--margin);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 50px;
+    height: 50px;
+}
+
+
+/*Usaremos o site fontawesome.com que nos permite usar itens (svg) que não temos.*/
+
+.botao-login{
+    margin-top: 40px;
+    background-color: rgb(235, 28, 28); /*Aqui temos a cor preto com intensidade de 50%, o que dá um efeito de transparência*/
+    border: none;
+    color: white;
+    width: 95%;
+
+    padding: 15px 30px; /*Altera o espaço interno do elemento*/
+    border-radius: 4px;
+    /*Lembrando que quando se passa um valor, altera todos os lados, dois, o primeiro é para cima e para baixo, o segundo para direita e esquerda. Ele funciona como se fosse um relógio ao 12:00, no sentido horário, se tiver 4 então, será: cima, direita, baixo, esquerda.*/
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 600;
+
+    
+    cursor: pointer; /*Ao passar o mouse por cima, muda o cursor, indicando que é uma parte clicável*/
+    transition: .4s ease all; /*Isso fará a transição do cursor e das cores (linha 89 e 90) terem um delay de 0,4 segundos*/
+}
+
+/*.campo:hover{
+    content: "";
+}
+Aqui eu queria dar o efeito do texto sumir quando a pessoa passasse o mouse pelo campo, mas não deu certo... Imagino que para isso tenha que usar JS*/
+.botao-login:hover{ /*Ao passar o mouse, a caixa e o texto mudam de cor*/
+    background-color: rgb(210, 28, 28);
+}
+
+.botao-login i{ /*Aqui vamos alterar a classe botão da tag i*/
+    margin-right: 8px;
+}
+
+.final{
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--texto);
+}
+
+.ajuda{
+margin-left: 60px;
+cursor: pointer;
+}
+
+i{
+    margin-right: 6px;
+}
+
+.facebook{
+    margin-top: 20px;
+    color: rgb(131, 127, 127);
+    cursor: pointer;
+}
+
+.fa-facebook-square{
+    background-color: white;
+    color: blue;
+    margin-bottom: 1px;
+    background-size: cover;
+    height: 14px;
+}
+
+.assine{
+    margin-top: 20px;
+    color: rgb(131, 127, 127);
+
+}
+
+.assine span{
+    color: white;
+    cursor: pointer;
+}
+
+.saiba-mais{
+    margin-top: 20px;
+    color: rgb(131, 127, 127);
+    font-size: 14px;
+}
+
+.saiba-mais span{
+    color: #0071eb;
+    cursor: pointer;
+}
+
+/*Responsividade dessa página específica*/
+
+@media screen and (max-width: 740px){ /*Nessa parte, o principal será mudar o fundo (nesse caso) e não deixar a tela cortar nenhum item.*/
+    body{
+        background: rgba(0, 0, 0);
+        padding: 0 5%;
+    }
+}

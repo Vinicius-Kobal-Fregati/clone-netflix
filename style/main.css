@@ -112,4 +112,17 @@ header .container{
 
 .carrossel-filmes{
     margin-top: 5px;
+    width: 100%;
+    align-items: center;
+    align-items: center;
+}
+
+
+.item{
+    height: 200px;
+    width: 250px;
+}
+
+.item:hover{
+    border: 4px solid white;
 }
